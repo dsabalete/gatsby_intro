@@ -1,9 +1,9 @@
-
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
-import Header from "./header"
-import "./layout.css"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import Header from './header'
+import './layout.css'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -15,7 +15,13 @@ const Layout = ({ children }) => (
             description
           }
         }
-       
+        file(relativePath: { regex: "/back/" }) {
+          childImageSharp {
+            fluid(maxHeight: 500) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
       }
     `}
     render={data => (
@@ -29,6 +35,7 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
+        <Img fluid={data.file.childImageSharp.fluid}/>
           <main>{children}</main>
 
           <footer>

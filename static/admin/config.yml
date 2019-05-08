@@ -1,7 +1,7 @@
 backend:
   name: github
   branch: master
-  repo: gabrilator/meetup_test
+  repo: dsabalete/gatsby_intro
 media_folder: static/uploads
 public_folder: /img
 collections:

@@ -3,7 +3,7 @@ module.exports = {
     title: `Gatsby Starter Barcelona Edition`,
     description: `This is only the beginning! `,
     place: 'Barcelona',
-    author: `@Gab`
+    author: `@dsabalete`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
