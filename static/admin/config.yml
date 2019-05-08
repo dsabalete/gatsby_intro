@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   branch: master
   repo: dsabalete/gatsby_intro
 media_folder: static/uploads
